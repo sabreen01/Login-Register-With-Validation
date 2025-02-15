@@ -60,7 +60,7 @@ function clearForm() {
 
 
 loginAnchor.addEventListener("click", function () {
-  window.location.href = './../html/login.html';
+  window.location.href = '/html/login.html';
 });
 
 
