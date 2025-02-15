@@ -42,7 +42,7 @@ loginBtn.addEventListener("click", function () {
 });
 
 signupAnchor.addEventListener("click", function () {
-  window.location.href = "./../html/index.html";
+  window.location.href = "./../index.html";
 });
 
 document.getElementById("loginButton").addEventListener("click", function () {
