@@ -1,4 +1,3 @@
-
 let signupBtn = document.getElementById("signupBtn");
 let signupNameInput = document.getElementById("signupName");
 let signupEmailInput = document.getElementById("email");
@@ -53,28 +52,30 @@ function signUp() {
 signupBtn.addEventListener("click", function () {
   signUp();
 });
+
 function isValidEmail(email) {
   let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
   return emailRegex.test(email);
 }
+
 function isNewEmail(email) {
   return !users.some((user) => user.email === email);
 }
+
 function clearForm() {
   signupNameInput.value = "";
   signupEmailInput.value = "";
   signupPasswordInput.value = "";
+  signupCoPasswordInput.value = "";
 }
-
 
 loginAnchor.addEventListener("click", function () {
   window.location.href = './login.html';
 });
 
-//toggle eye
 // Toggle eye icons for password and confirm password fields
 document.addEventListener('DOMContentLoaded', function() {
-  const togglePasswordIcons = document.querySelectorAll('.fa-eye');
+  const togglePasswordIcons = document.querySelectorAll('.togglePassword');
 
   togglePasswordIcons.forEach(icon => {
     icon.addEventListener('click', function() {
@@ -85,5 +86,3 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
-
-
