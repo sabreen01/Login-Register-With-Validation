@@ -71,3 +71,19 @@ loginAnchor.addEventListener("click", function () {
   window.location.href = './login.html';
 });
 
+//toggle eye
+// Toggle eye icons for password and confirm password fields
+document.addEventListener('DOMContentLoaded', function() {
+  const togglePasswordIcons = document.querySelectorAll('.fa-eye');
+
+  togglePasswordIcons.forEach(icon => {
+    icon.addEventListener('click', function() {
+      const passwordField = this.previousElementSibling;
+      const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordField.setAttribute('type', type);
+      this.classList.toggle('fa-eye-slash');
+    });
+  });
+});
+
+
