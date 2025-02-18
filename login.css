@@ -1,0 +1,159 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#141e30, #243b55);
+    color: #fff;
+  }
+  
+
+.container-sign {
+    width: 100%;
+    max-width: 600px;
+    padding: 2rem;
+}
+
+.form {
+    background: rgba(0,0,0,0.5);
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 15px 25px #00000099;
+    width: 100%;
+}
+
+.form h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.input-box {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+ 
+.input-box label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+  }
+  .input-box input {
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  .input-box input:focus {
+    outline: 2px solid #03e9f4;
+    background: rgba(255,255,255,0.2);
+  }
+  
+
+.password-container {
+    position: relative;
+}
+
+.password-container i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    cursor: pointer;
+}
+
+.pas-con {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.form-check input {
+    width: auto;
+}
+
+.remember {
+    font-size: 0.9rem;
+}
+
+.password-forget {
+    color: #03e9f4;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+button.sin-bt , button.login {
+    width: 100%;
+    padding: 12px;
+    margin-top: 1rem;
+    background: transparent;
+    color: #03e9f4;
+    border: 2px solid #03e9f4;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button.login:hover,
+button.sin-bt:hover {
+    background: #028f9b;
+    letter-spacing: 1px;
+    color: #fff;
+
+}
+.password-forget:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .container-sign {
+        padding: 1rem;
+    }
+    
+    .form {
+        padding: 1.5rem;
+    }
+    
+    .form h3 {
+        font-size: 1.5rem;
+    }
+    
+    .input-box input {
+        padding: 10px 12px;
+        font-size: 0.9rem;
+    }
+    
+    button.login,
+    button.sin-bt {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}

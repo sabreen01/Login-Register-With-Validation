@@ -3,17 +3,25 @@ let signupBtn = document.getElementById("signupBtn");
 let signupNameInput = document.getElementById("signupName");
 let signupEmailInput = document.getElementById("email");
 let signupPasswordInput = document.getElementById("password");
+let signupCoPasswordInput = document.getElementById("confirm-password");
 let loginAnchor = document.getElementById("loginAnchor");
 
 let users = localStorage.getItem("users") ? JSON.parse(localStorage.getItem("users")) : [];
- function signUp() {
+function signUp() {
+  if (signupPasswordInput.value !== signupCoPasswordInput.value) {
+    swal({
+      icon: "error",
+      text: "Passwords do not match",
+    });
+    return;
+  }
+
   let user = {
     name: signupNameInput.value,
     email: signupEmailInput.value,
     password: signupPasswordInput.value,
   };
 
- 
   if (
     signupNameInput.value === "" ||
     signupEmailInput.value === "" ||
@@ -26,7 +34,6 @@ let users = localStorage.getItem("users") ? JSON.parse(localStorage.getItem("use
     return;
   }
 
-  
   if (isValidEmail(signupEmailInput.value) && isNewEmail(signupEmailInput.value)) {
     users.push(user);
     localStorage.setItem("users", JSON.stringify(users)); 
@@ -42,6 +49,7 @@ let users = localStorage.getItem("users") ? JSON.parse(localStorage.getItem("use
     });
   }
 }
+
 signupBtn.addEventListener("click", function () {
   signUp();
 });
@@ -60,33 +68,6 @@ function clearForm() {
 
 
 loginAnchor.addEventListener("click", function () {
-  window.location.href = '/html/login.html';
+  window.location.href = './login.html';
 });
 
-
-
-const hidePasswordIcon = document.querySelector('#hidePassword');
-const mainPasswordInput = document.querySelector('#password');
-
-hidePasswordIcon.addEventListener('click', function () {
-  const type =
-    mainPasswordInput.getAttribute('type') === 'password'
-      ? 'text'
-      : 'password';
-  mainPasswordInput.setAttribute('type', type);
-  this.classList.toggle('fa-eye-slash');
-});
-
-// Toggle visibility for the confirm password
-const hideConfirmPasswordIcon =
-  document.querySelector('#hideConfirmPassword');
-const confirmPasswordInput = document.querySelector('#confirm-password');
-
-hideConfirmPasswordIcon.addEventListener('click', function () {
-  const type =
-    confirmPasswordInput.getAttribute('type') === 'password'
-      ? 'text'
-      : 'password';
-  confirmPasswordInput.setAttribute('type', type);
-  this.classList.toggle('fa-eye-slash');
-});

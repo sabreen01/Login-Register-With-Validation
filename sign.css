@@ -1,0 +1,131 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(#141e30, #243b55);
+  color: #fff;
+}
+
+.container-sign {
+  width: 100%;
+  max-width: 600px;
+  padding: 2rem;
+}
+
+form.form {
+  background: rgba(0,0,0,0.5);
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.6);
+  width: 100%;
+}
+
+h3 {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 1.5em;
+}
+
+.input-box {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.input-box label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.input-box input {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.input-box input:focus {
+  outline: 2px solid #03e9f4;
+  background: rgba(255,255,255,0.2);
+}
+
+button#signupBtn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 1rem;
+  background: transparent;
+  color: #03e9f4;
+  border: 2px solid #03e9f4;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button#signupBtn:hover {
+  background: #028f9b;
+  letter-spacing: 1px;
+  color: #fff; 
+}
+
+.loginText {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.loginText a {
+  color: #03e9f4;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 0.5rem;
+}
+
+.loginText a:hover {
+  text-decoration: underline;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container-sign {
+      padding: 1rem;
+  }
+  
+  form.form {
+      padding: 1.5rem;
+  }
+  
+  h3 {
+      font-size: 0.9rem;
+  }
+  
+  .input-box input {
+      padding: 10px 12px;
+      font-size: 0.9rem;
+  }
+  
+  button#signupBtn {
+      padding: 10px;
+      font-size: 0.9rem;
+  }
+}
+

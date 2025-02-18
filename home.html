@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<body>
+</body>
+<script>
+window.onload = function() {
+    const loginSuccess = sessionStorage.getItem('loginSuccess');
+    const userName = localStorage.getItem('username');
+
+    if (loginSuccess && userName) {
+        Swal.fire({
+            icon: "success",
+            title: "Welcome Back!",
+            text: `Hi ${userName}, you've successfully logged in!`,
+        });
+        
+        // Clear the session flag
+        sessionStorage.removeItem('loginSuccess');
+    } 
+};
+
+</script>
+</html>
